@@ -1,3 +1,6 @@
+Setup yocto:
+http://www.jumpnowtek.com/rpi/Raspberry-Pi-Systems-with-Yocto.html
+
 This layer depends on:
 
     URI: git://git.yoctoproject.org/poky.git
