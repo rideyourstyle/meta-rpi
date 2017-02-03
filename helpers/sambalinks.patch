@@ -1,0 +1,65 @@
+diff --git a/meta-networking/recipes-support/libldb/libldb_1.1.27.bb b/meta-networking/recipes-support/libldb/libldb_1.1.27.bb
+index f4370ef..fd3d720 100644
+--- a/meta-networking/recipes-support/libldb/libldb_1.1.27.bb
++++ b/meta-networking/recipes-support/libldb/libldb_1.1.27.bb
+@@ -6,7 +6,7 @@ LICENSE = "LGPL-3.0+ & LGPL-2.1+ & GPL-3.0+"
+ DEPENDS += "libtdb libtalloc libtevent popt"
+ RDEPENDS_pyldb += "python"
+ 
+-SRC_URI = "http://samba.org/ftp/ldb/ldb-${PV}.tar.gz \
++SRC_URI = "https://download.samba.org/pub/ldb/ldb-${PV}.tar.gz \
+            file://do-not-import-target-module-while-cross-compile.patch \
+            file://ldb-Add-configure-options-for-packages.patch \
+           "
+diff --git a/meta-networking/recipes-support/libtalloc/libtalloc_2.1.8.bb b/meta-networking/recipes-support/libtalloc/libtalloc_2.1.8.bb
+index 97a9a75..58a01a4 100644
+--- a/meta-networking/recipes-support/libtalloc/libtalloc_2.1.8.bb
++++ b/meta-networking/recipes-support/libtalloc/libtalloc_2.1.8.bb
+@@ -3,7 +3,7 @@ HOMEPAGE = "http://talloc.samba.org"
+ SECTION = "libs"
+ LICENSE = "LGPL-3.0+ & GPL-3.0+"
+ 
+-SRC_URI = "http://samba.org/ftp/talloc/talloc-${PV}.tar.gz \
++SRC_URI = "https://download.samba.org/pub/talloc/talloc-${PV}.tar.gz \
+            file://talloc-Add-configure-options-for-packages.patch \
+ "
+ LIC_FILES_CHKSUM = "file://talloc.h;beginline=3;endline=27;md5=a301712782cad6dd6d5228bfa7825249 \
+diff --git a/meta-networking/recipes-support/libtdb/libtdb_1.3.10.bb b/meta-networking/recipes-support/libtdb/libtdb_1.3.10.bb
+index 1d65d39..4b1ea83 100644
+--- a/meta-networking/recipes-support/libtdb/libtdb_1.3.10.bb
++++ b/meta-networking/recipes-support/libtdb/libtdb_1.3.10.bb
+@@ -5,7 +5,7 @@ LICENSE = "LGPL-3.0+ & GPL-3.0+"
+ LIC_FILES_CHKSUM = "file://tools/tdbdump.c;endline=18;md5=b59cd45aa8624578126a8c98f48018c4 \
+                     file://include/tdb.h;endline=27;md5=f5bb544641d3081821bcc1dd58310be6"
+ 
+-SRC_URI = "http://samba.org/ftp/tdb/tdb-${PV}.tar.gz \
++SRC_URI = "https://download.samba.org/pub/tdb/tdb-${PV}.tar.gz \
+            file://do-not-check-xsltproc-manpages.patch \
+            file://tdb-Add-configure-options-for-packages.patch \
+ "
+diff --git a/meta-networking/recipes-support/libtevent/libtevent_0.9.29.bb b/meta-networking/recipes-support/libtevent/libtevent_0.9.29.bb
+index 9f4e235..97095ae 100644
+--- a/meta-networking/recipes-support/libtevent/libtevent_0.9.29.bb
++++ b/meta-networking/recipes-support/libtevent/libtevent_0.9.29.bb
+@@ -6,7 +6,7 @@ LICENSE = "LGPLv3+"
+ DEPENDS += "libtalloc"
+ RDEPENDS_python-tevent = "python"
+ 
+-SRC_URI = "http://samba.org/ftp/tevent/tevent-${PV}.tar.gz \
++SRC_URI = "https://download.samba.org/pub/tevent/tevent-${PV}.tar.gz \
+            file://tevent-Add-configure-options-for-packages.patch \
+ "
+ LIC_FILES_CHKSUM = "file://tevent.h;endline=26;md5=4e458d658cb25e21efc16f720e78b85a"
+diff --git a/meta-oe/recipes-benchmark/dbench/dbench_4.0.bb b/meta-oe/recipes-benchmark/dbench/dbench_4.0.bb
+index 1915e4c..43a8d81 100644
+--- a/meta-oe/recipes-benchmark/dbench/dbench_4.0.bb
++++ b/meta-oe/recipes-benchmark/dbench/dbench_4.0.bb
+@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
+ DEPENDS = "popt"
+ 
+ SRC_URI = "\
+-    http://samba.org/ftp/tridge/dbench/dbench-${PV}.tar.gz \
++    https://download.samba.org/pub/tridge/dbench/dbench-${PV}.tar.gz \
+     file://destdir.patch \
+     file://makefile.patch"
+ 

@@ -1,6 +1,9 @@
 Setup yocto:
 http://www.jumpnowtek.com/rpi/Raspberry-Pi-Systems-with-Yocto.html
 
+Repair samba links:
+http://pastebin.com/0uTnAY4g
+
 This layer depends on:
 
     URI: git://git.yoctoproject.org/poky.git
