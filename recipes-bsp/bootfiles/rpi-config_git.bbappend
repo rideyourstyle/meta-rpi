@@ -21,4 +21,12 @@ do_deploy_append() {
     echo "" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
     echo "## Add mcp2515-can0 dtoverlay:" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
     echo "dtoverlay=mcp2515-can0,oscillator=16000000,interrupt=25" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+
+    # add spi-bcm2835 overlay
+    echo "" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+    echo "## Add spi-bcm2835 overlay:" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+    echo "dtoverlay=spi-bcm2835-overlay" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+
+    # set MAC-address
+    # echo " smsc95xx.macaddr=B8:27:EB:88:0A:11 " >> ${DEPLOYDIR}/bcm2835-bootfiles/cmdline.txt
 }
