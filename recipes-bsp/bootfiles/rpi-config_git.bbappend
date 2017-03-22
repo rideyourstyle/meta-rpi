@@ -4,6 +4,7 @@ do_deploy_append() {
 
     echo "" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
     echo "" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+
     echo "## Appends added by yocto:" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
 
     if [ -n "${ENABLE_RPI3_SERIAL_CONSOLE}" ]; then
@@ -23,8 +24,8 @@ do_deploy_append() {
     echo "dtoverlay=mcp2515-can0,oscillator=16000000,interrupt=25" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
 
     # add spi-bcm2835 overlay
-    echo "" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
-    echo "## Add spi-bcm2835 overlay:" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
-    echo "dtoverlay=spi-bcm2835-overlay" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+    #echo "" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+    #echo "## Add spi-bcm2835 overlay:" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
+    #echo "dtoverlay=spi-bcm2835-overlay" >> ${DEPLOYDIR}/bcm2835-bootfiles/config.txt
 
 }
